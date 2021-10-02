@@ -61,9 +61,21 @@ function datumEnSeizoen(){
     else if($maand == "June" || $maand == "July" || $maand == "August"){
         $seizoen = "Zomer";
     }
-    else if($maand == "September" || $maand == "October" || $maand == ""){
+    else if($maand == "September" || $maand == "October" || $maand == "November"){
         $seizoen = "Herft";
     }
 
     echo $maand." ".$datum." ".$seizoen;
+}
+
+//Oefening 8
+function splitsNaam($naam){
+    $dom = new DOMDocument();
+    $dom->loadHTML('<ul><li id="voorli">Voornaam: Kevin</li><li id="achtli">Achternaam: Felix</li></ul>');
+
+    $voorEnAchternaam = explode(" ",$naam);
+    $v = $dom->getElementById("voorli");
+    $v->innerHTML = (string)$voorEnAchternaam[0];
+
+
 }
