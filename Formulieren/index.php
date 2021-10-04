@@ -16,7 +16,8 @@
     }
 
     function formSubmitted(){
-        if ()
+        $dom = new DOMDocument();
+        $dom->loadHTML('<ul><li id="voorli">Voornaam: Kevin</li><li id="achtli">Achternaam: Felix</li></ul>');
         return False;
     }
 ?>
