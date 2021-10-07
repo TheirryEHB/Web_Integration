@@ -1,25 +1,32 @@
 <?php
 //echo phpinfo();
 
-    if(  formSubmitted()){
 
-        if(validatieFormulierCorrect()){
-            // Correct ingevuld
-            //// verwerkengegevens
-            /// // toon resultatenof redirect
-        }
-        else {
-            //Nietcorrect ingevuld
-            ////Maakde  foutboodschappen
-            /// //Toon het formulierweer.
-        }
-    }
+$showForm = true;
+function formSubmitted2(){
+    return (!empty($_POST));
+}
+function validate(){
+    return strlen($_POST['username']) >= 8 && !empty($_POST['country']);
+}
 
-    function formSubmitted(){
-        $dom = new DOMDocument();
-        $dom->loadHTML('<ul><li id="voorli">Voornaam: Kevin</li><li id="achtli">Achternaam: Felix</li></ul>');
-        return False;
+if ((!empty($_POST))){
+    if (validate()){
+        $boodschap = "Het is juist.";
+        header("Location: profile.php");
+        $showForm = false;
     }
+    else{
+        $boodschap = "Er is een fout.";
+        header("Location: forbidden.php");
+        $showForm = true;
+    }
+    echo $boodschap;
+}
+else{
+    $showForm = true;
+}
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -33,10 +40,17 @@
 </head>
 <body>
 
-<form action="process.php" method="post">
+<?php
+if($showForm) { ?>
+
+<form action="" method="post">
     <div class="form-group">
         <label for="username">Username:</label>
         <input type="text" class="form-control" name="username">
+    </div>
+    <div class="form-group">
+        <label for="country">Country:</label>
+        <input type="text" class="form-control" name="country">
     </div>
     <div class="form-group">
         <label for="pwd">Password:</label>
@@ -46,6 +60,10 @@
         <label><input type="checkbox"> Remember me</label>
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
+
+    <?php } ?>
+
+
 
 </form>
 </body>
