@@ -18,10 +18,10 @@
         <form action="Homescreen.php" method="post">
             <div class="form-group">
                 <label for="username">Taal:</label>
-                <div>
-                <input type="radio" name="English" value="English"> English<br>
-                <input type="radio" name="Dutch" value="Dutch"> Dutch<br>
-                <input type="radio" name="French" value="French"> French<br>
+                <div class="custom-control custom-radio">
+                <input type="radio" name="action" value="English" class="form-check-input"> English<br>
+                <input type="radio" name="action" value="Dutch" class="form-check-input"> Dutch<br>
+                <input type="radio" name="action" value="French" class="form-check-input"> French<br>
                 </div>
             </div>
 

@@ -1,13 +1,13 @@
 <?php
 
-    if(isset($_POST['English'])) {
-        setcookie('taal', 'EN');
-    }
-    elseif (isset($_POST['Dutch'])) {
-        setcookie('taal', 'NL');
-    }
-    elseif (isset($_POST['French'])) {
-        setcookie('taal', 'FR');
+    if(isset($_POST['action'])) {
+        /*echo $_POST['action'];*/
+        if($_POST['action'] == "English")
+            setcookie('taal', 'EN');
+        elseif ($_POST['action'] == "Dutch")
+            setcookie('taal', 'NL');
+        elseif ($_POST['action'] == "French")
+            setcookie('taal', 'FR');
     }
 
     if (isset($_COOKIE['taal'])){
