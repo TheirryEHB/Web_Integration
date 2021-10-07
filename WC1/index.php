@@ -11,7 +11,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="script/script.js"></script>
+
     <title>Werkcollege 1</title>
 </head>
 <body>
@@ -29,11 +29,12 @@ for ($x = 1; $x <= 19; $x++) {
 }
 ?>
 
+
+
 <?php require("Meetkunde.php");
 
     echo "de opp is: ".berekenOppervlakteCirkel(2.2);
     echo "<br>";
-//    DOMDocument::getElementById('Oef1').innerHTML = berekenOppervlakteCirkel(2.2);
     echo "opp driehoek: ".berekenOppervlakteDriehoek(2, 3);
     echo "<br>";
     echo "opp rechthoek: ".berekenOppervlakteRechthoek(5, 5);
@@ -42,26 +43,18 @@ for ($x = 1; $x <= 19; $x++) {
     echo "<br>";
     echo "cout". $functionsExecutedCounter;
     echo "<br>";
-
     gelijkAan(20);
-echo "<br>";
+    echo "<br>";
     som();
-echo "<br>";
-datumEnSeizoen();
-?>
-
-<ul>
-    <li id="voorli">Voornaam: Kevin</li>
-    <li id="achtli">Achternaam: Felix</li>
-</ul>
-<?php
-    function splitsNaam($naam){
-        $voorEnAchternaam = explode(" ",$naam);
-
-
-    }
+    echo "<br>";
+    datumEnSeizoen();
+    echo "<br>";
+    splitsNaam("Thierry K");
 ?>
 
 
+
+
+<script src="script/script.js"></script>
 </body>
 </html>
