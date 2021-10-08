@@ -13,6 +13,8 @@
     if (isset($_COOKIE['taal'])){
         echo $_COOKIE['taal'];
     }
+    else
+        setcookie('taal', 'NL');
 ?>
 
 <!doctype html>
@@ -29,14 +31,17 @@
 
 <form action="Instellingen.php" method="post">
     <div>
-        <p>Hallo, welcome to exersice 1.</p>
+        <?php
+            if ($_COOKIE['taal'] == 'EN')
+                echo "Hallo, welcome to exersice 1.";
+            elseif ($_COOKIE['taal'] == 'FR')
+                echo "Bonjour, bienvenue a l'exersice 1.";
+            else
+                echo "Hallo, welkome bij oefening 1.";
+        ?>
+
     </div>
-    <div>
-        <p>Hallo, welkome bij oefening 1.</p>
-    </div>
-    <div>
-        <p>Bonjour, bienvenue a l'exersice 1.</p>
-    </div>
+
     <button type="submit" class="btn btn-default">Submit</button>
 
 </form>
