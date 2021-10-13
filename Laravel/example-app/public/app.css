@@ -1,0 +1,9 @@
+.card-title{
+    color: red;
+    margin: 0;
+}
+#zoekertjesSection{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
