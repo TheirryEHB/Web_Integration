@@ -1,0 +1,30 @@
+body{
+    background: linear-gradient(to bottom right,#506d96  0%, #8a4571 100%);
+}
+/*Photo by <a href="https://unsplash.com/@dtopkin1?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Dayne Topkin</a> on <a href="https://unsplash.com/s/photos/coding?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  */
+.headdiv{
+    background-image: url("../images/projectsheader2.jpg");
+}
+
+/*Inhoud*/
+.grid-container1{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 2.5% 6% 6%;
+    grid-template-areas:
+        'What What'
+        'prj1 prj2';
+    height: 9000px;
+    width: 90%;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 3em;
+
+}
+.projectExpl{
+    grid-area: What;
+}
+.prj1{
+    grid-area: prj1;
+}
